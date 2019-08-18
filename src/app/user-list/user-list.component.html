@@ -1,0 +1,39 @@
+<div>
+  <br/>
+  <p><span class="hand" routerLink="/user-list">Users</span> > <b>List</b></p>
+</div>
+
+<div class="grid-container">
+<table mat-table [dataSource]="User" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef>  </th>
+          <td mat-cell *matCellDef="let user" class="td-edit" routerLink="/user-details/{{user.id}}">
+                <mat-icon color="warn">edit</mat-icon>
+              </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef>  </th>
+          <td mat-cell *matCellDef="let user" class="td-edit"><span (click)="deleteUser(user.id)">
+              <mat-icon color="warn">delete</mat-icon>
+          </span></td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>
+
+<div class="example-button-row">
+    <button mat-raised-button color="primary" routerLink="/create-user">Add User</button>
+</div>

@@ -1,0 +1,38 @@
+<div>
+    <br/>
+    <p><span class="hand" routerLink="/user-list">Users</span> > <b>Edit</b></p>
+  </div>
+
+<div class="example-container">
+    <mat-form-field>
+      <input matInput [(ngModel)]="userData.id" placeholder="Id" value="" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput [(ngModel)]="userData.name" placeholder="Name" value="" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="updateUser()">Update User</button>
+  </div>
+
+<!--
+<div class="container custom-container">
+    <div class="col-md-12">
+      
+      <h3 class="mb-3 text-center">Update User</h3>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userData.id" class="form-control" placeholder="Id">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userData.name" class="form-control" placeholder="Name">
+      </div>
+  
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="updateUser()">Update User</button>
+      </div>
+      
+    </div>
+  </div>
+-->

@@ -1,0 +1,16 @@
+<div>
+    <br/>
+    <p><span class="hand" routerLink="/user-list">Users</span> > <b>Create</b></p>
+  </div>
+
+<div class="example-container">
+  <mat-form-field>
+    <input matInput [(ngModel)]="userDetails.id" placeholder="Id" value="" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="userDetails.name" placeholder="Name" value="" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addUser()">Create User</button>
+</div>

@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+  }
+
+.grid-container {
+  padding: 50px;
+}  
+
+.td-edit {
+  cursor: pointer;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-left: 25%;
+  width: 50%;
+}
+
+.hand {
+  cursor: pointer;
+}
